@@ -44,20 +44,20 @@ The 'Description of role' field does not get escaped by the templating engine,
 so you can put raw HTML in it if you like.
 """
 experience = [
-        ['Lead Developer',
-            '2015 - Present',
-            'Startup Hubs, San Francisco',
-            '<p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.</p>  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>'
+        ['Data Engineer - DevOps Team Member',
+            '2018 - Present',
+            'PA Evolution, Rome',
+            '<p>- Design/deploy/deliver big data pipelines;<br>- Monitor all componenets/processes related to the app constantly focused on improving performance and avoiding problems;<br>- Make time series analysis of cloud web servers metrics in orders to scale up/down the VMs to avoid useless costs;<br>- Create custom event for alerting based on thresholds calculated with anomaly detenction approach;<br>- Cupport the qa team and qa team in bug fixing;<br>- Cupport the client directly in tasks related to my field.<br>- Responsable of the integrity and quality of the data layer exposed to the client for BI/Analytics purposes.</p>'
         ],
-        ['Senior Software Engineer',
-            '2014 - 2015',
-            'Google, London',
-            '<p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>'
+        ['Marketing Data Anylist',
+            '2017 - 2018',
+            'GEKO S.p.A., Rome',
+            '<p>- Create data mart with data scraped on competitors website;<br>- Generate dashboard/reports with customer churn rate/retention KPI;<br>- Product price analysis;<br>- Offer insights about new products potential;<br>- Examine a campaign&apos;s return on investment;<br>Technologies used: SQL, PowerBI, Python, R</p>'
         ],
-        ['UI Developer',
-            '2012 - 2014',
-            'Amazon, London',
-            '<p>Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>'
+        ['Reporting Specialist',
+            '2014 - 2017',
+            'GEKO S.p.A., Rome',
+            '<p>- Design and execute automated procedures interfacing with systems to report business analytics and sales support indicators;<br>- Generate periodic reports with accuracy to identify and process data sources;<br>- Develop queries to extract data on department needs;<br>- Test reports and use problem solving skills to determine problems&rsquo; root cause and suggest solutions with users;<br>- Discuss with staff, users and management to develop requirements to create new report or revise current report.<br>Technologies used: SQL, SSRS, SSIS, SSAS.</p>'
         ]
     ]
 
@@ -68,7 +68,7 @@ The project_intro field is for a short introduction to your work.
 Project are a list of lists, where each sublist refers to a specific project,
 and is of the form:
     ['Title', 'Description', 'Link to project webpage']
-"""
+
 project_intro = '<p>You can list your side projects or open source libraries in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.</p>'
 projects = [
         ['Velocity',
@@ -92,6 +92,8 @@ projects = [
             'http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/'
         ]
     ]
+
+"""
 
 
 

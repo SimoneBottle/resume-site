@@ -105,7 +105,7 @@ default_data = {
     'name' : 'Alan Doe',
     'tagline' : 'Data Engineer',
     'email' : 'napolitano.sim@gmail.com',
-    'phone' : '+39 3246199079'
+    'phone' : '+39 3246199079',
     'linkedin' : 'linkedin.com/in/napolitanosimone ',
     'languages' : languages,
     'education' : education,

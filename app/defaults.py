@@ -116,7 +116,7 @@ default_data = {
     'interests' : interests,
     'skills' : skills,
     'summary' : summary,
-    'experience' : experience,
-    'project_intro' : project_intro,
-    'projects' : projects
+    'experience' : experience
+    #'project_intro' : project_intro,
+    #'projects' : projects
     }

@@ -7,9 +7,9 @@ summary = '<p>Summarise your career here lorem ipsum dolor sit amet, consectetue
 
 
 languages = [
-        ['English', ' (Native)'],
-        ['French', ' (Proffesional)'],
-        ['Spanish', ' (Proffesional)']
+        ['Italian', ' (Native)'],
+        ['English', ' (Intermediate)'],
+        ['Spanish', ' (Fluent)']
         ]
 
 education = [
@@ -17,15 +17,18 @@ education = [
         ['BSc in Applied Mathematics', 'Bristol University', '2007 - 2011']
         ]
 
-interests = ['Climbing', 'Snowboarding', 'Cooking']
+interests = ['Yoga', 'Plants', 'Food']
 
 skills = [
-        ['Python & Django', '98%'],
-        ['Javascript & jQuery', '98%'],
-        ['Angular', '98%'],
-        ['HTML5 & CSS', '95%'],
-        ['Ruby on Rails', '85%'],
-        ['Sketch & Photoshop', '60%']
+        ['Python', '70%'],
+        ['Python - Dash', '60%'],
+        ['Databricks - Spark - PySpark', '40%'],
+        ['SQL', '80%'],
+        ['ElasticSearch', '80%'],
+        ['Power BI', '85%'],
+        ['Python - Dash', '60%'],
+        ['Azure', '60%']
+        
         ]
 
 """

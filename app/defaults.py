@@ -101,13 +101,13 @@ This dictionary puts everything together. It will be read by the Flask app when
 it is instantiated.
 """
 default_data = {
-    'site_title' : 'Responsive Resume/CV Template for Developers',
-    'name' : 'Alan Doe',
+    'site_title' : 'Simone Napolitano Resume Web Site',
+    'name' : 'Simone Napolitano',
     'tagline' : 'Data Engineer',
     'email' : 'napolitano.sim@gmail.com',
     'phone' : '+39 3246199079',
     'website' : 'Based in Rome',
-    'linkedin' : 'linkedin.com/in/napolitanosimone ',
+    'linkedin' : 'linkedin.com/in/napolitanosimone',
     'languages' : languages,
     'education' : education,
     'interests' : interests,
@@ -117,3 +117,4 @@ default_data = {
     'project_intro' : project_intro,
     'projects' : projects
     }
+

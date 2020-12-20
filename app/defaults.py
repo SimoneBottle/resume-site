@@ -13,8 +13,9 @@ languages = [
         ]
 
 education = [
-        ['MSc in Computer Science', 'University of London', '2011 - 2012'],
-        ['BSc in Applied Mathematics', 'Bristol University', '2007 - 2011']
+        ['Laurea Triennale Economia e Gestione Aziendale', 'Università Europea di Roma', '2007 - 2011'],
+        ['Erasmus Project - Administración y Dirección de Empresas', 'Universidad Francisco de Vitoria', '2013 - 2013'],
+        ['Laurea Magistrale Economia, Managament e Finanza', 'Università Europea di Roma', '2011 - 2014']
         ]
 
 interests = ['Yoga', 'Plants', 'Food']
@@ -22,12 +23,12 @@ interests = ['Yoga', 'Plants', 'Food']
 skills = [
         ['Python', '70%'],
         ['Python - Dash', '60%'],
-        ['Databricks - Spark - PySpark', '40%'],
+        ['Spark - PySpark', '40%'],
         ['SQL', '80%'],
         ['ElasticSearch', '80%'],
         ['Power BI', '85%'],
         ['Python - Dash', '60%'],
-        ['Azure', '60%']
+        ['Azure Ecosystem', '50%']
         
         ]
 
@@ -102,13 +103,10 @@ it is instantiated.
 default_data = {
     'site_title' : 'Responsive Resume/CV Template for Developers',
     'name' : 'Alan Doe',
-    'tagline' : 'Full Stack Developer',
-    'email' : 'alan.doe@website.com',
-    'phone' : '0123 456 789',
-    'website' : 'portfoliosite.com',
-    'linkedin' : 'linkedin.com/in/alandoe',
-    'github' : 'github.com/username',
-    'twitter' : '@twittername',
+    'tagline' : 'Data Engineer',
+    'email' : 'napolitano.sim@gmail.com',
+    'phone' : '+39 3246199079'
+    'linkedin' : 'linkedin.com/in/napolitanosimone ',
     'languages' : languages,
     'education' : education,
     'interests' : interests,

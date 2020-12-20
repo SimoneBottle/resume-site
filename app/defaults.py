@@ -3,7 +3,7 @@ Summary
 -------
 The summary is a brief intro. You can put raw HTML into this field.
 """
-summary = "<p>Data obsessed with a financial academic background, try to improveevery day my analytics skills. Curious about every application in Data Science world. At the moment i'm really busy as DevOps Engineering team member in a data-intensive (PaaS) distributed web app project. What basically i'm doing every day is to carefully monitor each App components with the help of a complex set of real time dashboard. I'm also responsable of the integrity and quality of the data layer exposed to the client (big player in the automotive market) for BI/Analytics purposes.</p>"
+summary = "<p>Data obsessed with a financial academic background, try to improveevery day my analytics skills. Curious about every application in Data Science world. At the moment i'm really busy as DevOps Engineering team member in a data-intensive (PaaS) distributed web app project. What basically i'm doing every day is to carefully monitor each App components with the help of a complex set of real time dashboard, perfrom a huge amount of query againt SQL and NoSQL DB and a lot of Powershell scripts too. I'm also responsable of the integrity and quality of the data layer exposed to the client (big player in the automotive market) for BI/Analytics purposes.</p>"
 
 
 languages = [

@@ -97,7 +97,7 @@
                 {% endfor %}
                 
                 
-            </section><!--//section-->
+            <!--/section>
             
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
@@ -105,14 +105,14 @@
                         {% autoescape false %}
                         {{ config.data.project_intro }} 
                         {% endautoescape %}
-                </div><!--//intro-->
+                </div>
 
                 {% for project in config.data.projects %}
                 <div class="item">
                     <span class="project-title"><a href="{{project[2]}}" target="_blank">{{project[0]}}</a></span> - 
                     <span class="project-tagline">{{project[1]}}</span>
                 </div><!--//item-->
-                {% endfor %}
+                <!--{% endfor %}-->
             
             <section class="skills-section section">
                 <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>

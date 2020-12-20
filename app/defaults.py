@@ -47,7 +47,7 @@ experience = [
         ['Data Engineer - DevOps Team Member',
             '2018 - Present',
             'PA Evolution, Rome',
-            '<p>- Design/deploy/deliver big data pipelines;<br>- Monitor all componenets/processes related to the app constantly focused on improving performance and avoiding problems;<br>- Make time series analysis of cloud web servers metrics in orders to scale up/down the VMs to avoid useless costs;<br>- Create custom event for alerting based on thresholds calculated with anomaly detenction approach;<br>- Cupport the qa team and qa team in bug fixing;<br>- Cupport the client directly in tasks related to my field.<br>- Responsable of the integrity and quality of the data layer exposed to the client for BI/Analytics purposes.</p>'
+            '<p>- Design/deploy/deliver big data pipelines;<br>- Monitor all componenets/processes related to the app constantly focused on improving performance and avoiding problems;<br>- Make time series analysis of cloud web servers metrics in orders to scale up/down the VMs to avoid useless costs;<br>- Create custom event for alerting based on thresholds calculated with anomaly detenction approach;<br>- Support the qa team and qa team in bug fixing;<br>- Support the client directly in tasks related to my field.<br>- Responsable of the integrity and quality of the data layer exposed to the client for BI/Analytics purposes.</p>'
         ],
         ['Marketing Data Anylist',
             '2017 - 2018',

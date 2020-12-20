@@ -106,6 +106,7 @@ default_data = {
     'tagline' : 'Data Engineer',
     'email' : 'napolitano.sim@gmail.com',
     'phone' : '+39 3246199079',
+    'website' : 'Based in Rome',
     'linkedin' : 'linkedin.com/in/napolitanosimone ',
     'languages' : languages,
     'education' : education,

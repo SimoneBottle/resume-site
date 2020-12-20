@@ -1,1 +1,1 @@
-web: gunicorn main_:app
+web: gunicorn "resume-site:create_app()"

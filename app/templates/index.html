@@ -1,122 +1,148 @@
-"""
-Summary
--------
-The summary is a brief intro. You can put raw HTML into this field.
-"""
-summary = '<p>Data obsessed with a financial academic background, try to improveevery day my analytics skills. Curious about every application in Data Science world. At the moment i&apos;m really busy as DevOps Engineering team member in a data-intensive (PaaS) distributed web app project. What basically i&apos;m doing every day is to carefully monitor each App components with the help of a complex set of real time dashboard. Also &nbsp;<br><br>- support the qa team and qa team in bug fixing;<br>- design/deploy/deliver big data pipelines;<br>- make time series analysis of cloud web servers metrics in orders to scale up/down the VMs to avoid useless costs;<br>- create custom event for alerting based on thresholds calculated with anomaly detenction approach;<br>- support the client directly in tasks related to my field.<br><br>I&apos;m also responsable of the integrity and quality of the data layer exposed to the client (big player in the automotive market) for BI/Analytics purposes.</p>'
+{% extends "bootstrap/base.html" %}
 
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+{% endblock %}
 
-languages = [
-        ['Italian', ' (Native)'],
-        ['English', ' (Intermediate)'],
-        ['Spanish', ' (Fluent)']
-        ]
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='plugins/font-awesome/css/font-awesome.css')}}">
+{% endblock %}
 
-education = [
-        ['Laurea Triennale Economia e Gestione Aziendale', 'Università Europea di Roma', '2007 - 2011'],
-        ['Erasmus Project - Administración y Dirección de Empresas', 'Universidad Francisco de Vitoria', '2013 - 2013'],
-        ['Laurea Magistrale Economia, Managament e Finanza', 'Università Europea di Roma', '2011 - 2014']
-        ]
+{% block title %}
+    {{ config.data.site_title}}
+{% endblock %}
 
-interests = ['Yoga', 'Plants', 'Food']
-
-skills = [
-        ['Python', '70%'],
-        ['Python - Dash', '60%'],
-        ['Jupyter Notebook', '70%'],
-        ['Spark - PySpark', '40%'],
-        ['SQL', '80%'],
-        ['ElasticSearch', '80%'],
-        ['Power BI', '85%'],
-        ['PowerShell', '50%'],
-        ['Azure Ecosystem', '50%']
+{% block body %}
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="{{url_for('static', filename='images/profile.png')}}" alt="" />
+                <h1 class="name"> {{ config.data.name }} </h1>
+                <h3 class="tagline">{{ config.data.tagline }}</h3>
+            </div><!--//profile-container-->
+            
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto:{{ config.data.email }}">{{ config.data.email }}</a></li>
+                    <li class="phone"><i class="fa fa-phone"></i>{{ config.data.phone }}</li>
+                    <li class="website"><i class="fa fa-globe"></i><a href={{ config.data.website }} target="_blank">{{ config.data.website }}</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://{{ config.data.linkedin }}" target="_blank">{{ config.data.linkedin }}</a></li>
+                    <!--li class="github"><i class="fa fa-github"></i><a href="https://{{ config.data.github }}" target="_blank">{{ config.data.github}}</a></li>
+                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{ config.data.twitter }}" target="_blank">{{ config.data.twitter }}</a></li-->
+                </ul>
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                {% for ed in config.data.education %}
+                <div class="item">
+                    <h4 class="degree">{{ed[0]}}</h4>
+                    <h5 class="meta">{{ed[1]}}</h5>
+                    <div class="time">{{ed[2]}}</div>
+                </div><!--//item-->
+                {% endfor %}
+            </div><!--//education-container-->
+            
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for lang in config.data.languages %}
+                    <li>{{lang[0]}}<span class="lang-desc">{{lang[1]}}</span></li>
+                    {% endfor %}
+                </ul>
+            </div><!--//interests-->
+            
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for interest in config.data.interests %}
+                    <li>{{interest}}</li>
+                    {% endfor %}
+                </ul>
+            </div><!--//interests-->
+            
+        </div><!--//sidebar-wrapper-->
         
-        ]
+        <div class="main-wrapper">
+            
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
+                <div class="summary">
+                    {% autoescape false %}
+                    {{ config.data.summary }}
+                    {% endautoescape %}
+                </div><!--//summary-->
+            </section><!--//section-->
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+                
+                {% for job in config.data.experience %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{job[0]}}</h3>
+                            <div class="time">{{job[1]}}</div>
+                        </div><!--//upper-row-->
+                        <div class="company">{{job[2]}}</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        {% autoescape false %}
+                        {{job[3]}}  
+                        {% endautoescape %}
+                    </div><!--//details-->
+                </div><!--//item-->
+                {% endfor %}
+                
+                
+            <!--/section>
+            
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
+                <div class="intro"> 
+                        {% autoescape false %}
+                        {{ config.data.project_intro }} 
+                        {% endautoescape %}
+                </div>
 
-"""
-Experience
-----------
-This should be a list of lists. Each sublist corresponds to a particular job
-and is of the form:
-    ['Title', 'Date range', 'Company name and location', 'Description of role']
+                {% for project in config.data.projects %}
+                <div class="item">
+                    <span class="project-title"><a href="{{project[2]}}" target="_blank">{{project[0]}}</a></span> - 
+                    <span class="project-tagline">{{project[1]}}</span>
+                </div><!--//item-->
+                <!--{% endfor %}-->
+            
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+                <div class="skillset">        
+                    {% for skill in config.data.skills %}
+                    <div class="item">
+                        <h3 class="level-title">{{skill[0]}}</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="{{skill[1]}}">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    {% endfor %}
+                    
+                </div>  
+            </section><!--//skills-section-->
+            
+        </div><!--//main-body-->
+    </div>
+<footer class="footer">
+        <div class="text-center">
+                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer>
 
-The 'Description of role' field does not get escaped by the templating engine,
-so you can put raw HTML in it if you like.
-"""
-experience = [
-        ['Data Engineer - DevOps Team Member',
-            '2018 - Present',
-            'PA Evolution, Rome',
-            '<p>- Design/deploy/deliver big data pipelines;<br>- Monitor all componenets/processes related to the app constantly focused on improving performance and avoiding problems;<br>- Make time series analysis of cloud web servers metrics in orders to scale up/down the VMs to avoid useless costs;<br>- Create custom event for alerting based on thresholds calculated with anomaly detenction approach;<br>- Cupport the qa team and qa team in bug fixing;<br>- Cupport the client directly in tasks related to my field.<br>- Responsable of the integrity and quality of the data layer exposed to the client for BI/Analytics purposes.</p>'
-        ],
-        ['Marketing Data Anylist',
-            '2017 - 2018',
-            'GEKO S.p.A., Rome',
-            '<p>- Create data mart with data scraped on competitors website;<br>- Generate dashboard/reports with customer churn rate/retention KPI;<br>- Product price analysis;<br>- Offer insights about new products potential;<br>- Examine a campaign&apos;s return on investment;<br>Technologies used: SQL, PowerBI, Python, R</p>'
-        ],
-        ['Reporting Specialist',
-            '2014 - 2017',
-            'GEKO S.p.A., Rome',
-            '<p>- Design and execute automated procedures interfacing with systems to report business analytics and sales support indicators;<br>- Generate periodic reports with accuracy to identify and process data sources;<br>- Develop queries to extract data on department needs;<br>- Test reports and use problem solving skills to determine problems&rsquo; root cause and suggest solutions with users;<br>- Discuss with staff, users and management to develop requirements to create new report or revise current report.<br>Technologies used: SQL, SSRS, SSIS, SSAS.</p>'
-        ]
-    ]
-
-"""
-Projects
---------
-The project_intro field is for a short introduction to your work.
-Project are a list of lists, where each sublist refers to a specific project,
-and is of the form:
-    ['Title', 'Description', 'Link to project webpage']
-
-project_intro = '<p>You can list your side projects or open source libraries in this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus.</p>'
-projects = [
-        ['Velocity',
-            'A responsive website template designed to help startups promote, market and sell their products.',
-            '#hook'
-        ],
-        ['DevStudio',
-            'A responsive website template designed to help startups promote, market and sell their products.',
-            'http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/'
-        ],
-        ['Tempo',
-            'A responsive website template designed to help startups promote their products or services and to attract users &amp; investors.',
-            'http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/'
-        ],
-        ['Atom',
-            'A comprehensive website template solution for startups/developers to market their mobile apps.',
-            'http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/'
-        ],
-        ['Delta',
-            'A responsive Bootstrap one page theme designed to help app developers promote their mobile apps.',
-            'http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/'
-        ]
-    ]
-
-"""
-
-
-
-"""
-default_data
-------------
-This dictionary puts everything together. It will be read by the Flask app when
-it is instantiated.
-"""
-default_data = {
-    'site_title' : 'Simone Napolitano Resume Web Site',
-    'name' : 'Simone Napolitano',
-    'tagline' : 'Data Engineer',
-    'email' : 'napolitano.sim@gmail.com',
-    'phone' : '+39 3246199079',
-    'website' : 'Based in Rome',
-    'linkedin' : 'linkedin.com/in/napolitanosimone',
-    'languages' : languages,
-    'education' : education,
-    'interests' : interests,
-    'skills' : skills,
-    'summary' : summary,
-    'experience' : experience,
-    'project_intro' : project_intro,
-    'projects' : projects
-    }
+{% block scripts %}
+<script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+<script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+{%- endblock scripts %}
+    
+{% endblock body %}
